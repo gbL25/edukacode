@@ -18,6 +18,6 @@ public class HelloController {
     @PostMapping
     public String criarMensagem(@RequestBody String json) {
         System.out.println("Mensagem recebida: " + json);
-        return "Mensagem cria com sucesso!";
+        return "Mensagem criada com sucesso!";
     }
 }
