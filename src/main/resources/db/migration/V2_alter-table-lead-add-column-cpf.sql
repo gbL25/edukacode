@@ -1,0 +1,3 @@
+ALTER TABLE dadoslead(
+   ADD cpf VARCHAR(12) NOT NULL
+)
