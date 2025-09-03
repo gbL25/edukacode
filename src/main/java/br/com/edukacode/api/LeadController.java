@@ -1,8 +1,9 @@
 package br.com.edukacode.api;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,8 +28,8 @@ public class LeadController {
     }
 
     @GetMapping
-    public List<DadosListagemLead> listarLeads() {
-        return repository.findAll().stream().map(DadosListagemLead::new).toList();
+    public Page<DadosListagemLead> listarLeads(@PageableDefault(size= 5, sort={"nome"})Pageable paginacao) {
+        return repository.findAll(paginacao).map(DadosListagemLead::new);
     }
 
     @PutMapping
