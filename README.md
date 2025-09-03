@@ -19,9 +19,7 @@ O sistema segue as melhores práticas de **arquitetura REST**, aplicando **boas 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="40" alt="Spring Boot"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" alt="MySQL"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" width="40" alt="Hibernate"/>
-  <span style="background:white; padding:4px; border-radius:6px;">
-  <img src="https://icons.iconarchive.com/icons/simpleicons-team/simple/128/flyway-icon.png" width="40" alt="Flyway"/>
-  </span>
+  <img src="https://camo.githubusercontent.com/821c82c9e0f2e8df2c413fe555037e4bbfd69a6b686b039ee94dcf6f534977a4/68747470733a2f2f646f63756d656e746174696f6e2e7265642d676174652e636f6d2f646f776e6c6f61642f6174746163686d656e74732f3133383334363837362f46443f76657273696f6e3d33266d6f64696669636174696f6e446174653d31363333393832383639393532266170693d7632" alt="Flyway" title="Flyway" data-canonical-src="https://documentation.red-gate.com/download/attachments/138346876/FD?version=3&amp;modificationDate=1633982869952&amp;api=v2" width="40"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="40" alt="Maven"/>
   <img src="https://junit.org/junit5/assets/img/junit5-logo.png" width="60" alt="JUnit"/>
 </p>  
