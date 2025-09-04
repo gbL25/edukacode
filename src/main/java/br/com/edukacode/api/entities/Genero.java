@@ -1,5 +1,6 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.entities;
 
+import br.com.edukacode.api.dto.DadosCadastroGenero;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,26 +11,18 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "lead")
-@Entity(name = "Lead")
+@Table(name = "genero")
+@Entity(name = "Genero")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of="id")
-public class Lead {
+public class Genero {
     @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String email;
-    private String telefone;
-    private String cpf;
 
-    public Lead(DadosCadastroLead dados){
+    public Genero(DadosCadastroGenero dados){
         this.nome = dados.nome();
-        this.email = dados.email();
-        this.telefone = dados.telefone();
-        this.cpf = dados.cpf();
     }
 }
-
-

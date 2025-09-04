@@ -1,4 +1,4 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.edukacode.api.dto.DadosAtualizacaoLead;
+import br.com.edukacode.api.dto.DadosCadastroLead;
+import br.com.edukacode.api.dto.DadosListagemLead;
+import br.com.edukacode.api.entities.Lead;
+import br.com.edukacode.api.repository.LeadRepository;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
@@ -28,17 +34,19 @@ public class LeadController {
     }
 
     @GetMapping
-    public Page<DadosListagemLead> listarLeads(@PageableDefault(size= 5, sort={"nome"})Pageable paginacao) {
+    public Page<DadosListagemLead> listarLeads(@PageableDefault(size= 25, sort={"email"})Pageable paginacao) {
         return repository.findAll(paginacao).map(DadosListagemLead::new);
     }
 
     @PutMapping
-    public void atulizarLead() {
-
+    @Transactional
+    public void atulizarLead(@RequestBody DadosAtualizacaoLead dados) {
+        var lead = repository.getReferenceById(dados.id());
+        lead.atualizarInformacoes(dados);
     }
 
     @DeleteMapping
     public void excluirLead() {
-
+        // var lead = repository.deleteById(dados.id());
     }
 }
